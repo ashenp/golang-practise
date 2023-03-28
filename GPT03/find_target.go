@@ -1,4 +1,4 @@
-package GPT02
+package GPT03
 
 func FindTarget(nums []int, target int) (int, int) {
 	dict := make(map[int]int)

@@ -1,4 +1,4 @@
-package GPT02
+package GPT04
 
 type ListNode struct {
 	Val  int
