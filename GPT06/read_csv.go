@@ -6,12 +6,12 @@ import (
 	"strings"
 )
 
-func ReadCsv(filepath string) [][]string {
+func ReadCsv(filepath string) ([][]string, error) {
 	file, err := os.Open(filepath)
 	if err != nil {
-		return nil
+		return nil, err
 	}
-
+	defer file.Close()
 	var res [][]string
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
@@ -19,5 +19,5 @@ func ReadCsv(filepath string) [][]string {
 		token := strings.Split(line, ",")
 		res = append(res, token)
 	}
-	return res
+	return res, nil
 }
