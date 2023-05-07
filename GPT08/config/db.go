@@ -4,17 +4,13 @@ import (
 	"fmt"
 	"golang-practise/GPT08/model"
 
-	"gorm.io/gorm/schema"
-
+	"github.com/spf13/viper"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
-
-	"github.com/spf13/viper"
+	"gorm.io/gorm/schema"
 )
 
-var (
-	db *gorm.DB
-)
+var GlobalDb *gorm.DB
 
 func InitDB() {
 	dsn := fmt.Sprintf(
@@ -25,8 +21,7 @@ func InitDB() {
 		viper.GetString("mysql.port"),
 		viper.GetString("mysql.database"),
 	)
-	var err error
-	db, err = gorm.Open(mysql.Open(dsn), &gorm.Config{
+	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{
 		NamingStrategy: schema.NamingStrategy{
 			SingularTable: true, // 使用单数表名
 		},
@@ -35,4 +30,5 @@ func InitDB() {
 		panic("failed to connect to database")
 	}
 	db.AutoMigrate(&model.Todo{})
+	GlobalDb = db
 }
