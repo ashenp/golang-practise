@@ -1,7 +1,8 @@
 package main
 
 import (
-	"golang-practise/GPT08"
+	"fmt"
+	"golang-practise/GPT09"
 	_ "golang-practise/docs"
 )
 
@@ -25,5 +26,7 @@ func main() {
 	//fmt.Println(GPT01.WordCount("/Users/pianweiwan/Documents/github/golang-practise/GPT01/test.txt"))
 	//fmt.Println(GPT02.WordReverse("/Users/pianweiwan/Documents/github/golang-practise/GPT01/test.txt"))
 	//GPT05.HttpServer()
-	GPT08.ServerRun()
+	//GPT08.ServerRun()
+	res := GPT09.CountLinesConcurrently("/Users/pianweiwan/Documents/github/golang-practise/GPT09", 4)
+	fmt.Println("res:", res)
 }
