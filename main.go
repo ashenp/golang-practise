@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
-	"golang-practise/GPT09"
-	_ "golang-practise/docs"
+	"golang-practise/GPT13"
 )
 
 // @title           Swagger Example API
@@ -27,6 +25,7 @@ func main() {
 	//fmt.Println(GPT02.WordReverse("/Users/pianweiwan/Documents/github/golang-practise/GPT01/test.txt"))
 	//GPT05.HttpServer()
 	//GPT08.ServerRun()
-	res := GPT09.CountLinesConcurrently("/Users/pianweiwan/Documents/github/golang-practise/GPT09", 4)
-	fmt.Println("res:", res)
+	//res := GPT09.CountLinesConcurrently("/Users/pianweiwan/Documents/github/golang-practise/GPT09", 4)
+	//fmt.Println("res:", res)
+	GPT13.Test()
 }
