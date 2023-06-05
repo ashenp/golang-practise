@@ -1,7 +1,12 @@
 package main
 
 import (
+<<<<<<< HEAD
 	"golang-practise/GPT13"
+=======
+	"golang-practise/GPT11"
+	_ "golang-practise/docs"
+>>>>>>> 75d5749 (update)
 )
 
 // @title           Swagger Example API
@@ -27,5 +32,4 @@ func main() {
 	//GPT08.ServerRun()
 	//res := GPT09.CountLinesConcurrently("/Users/pianweiwan/Documents/github/golang-practise/GPT09", 4)
 	//fmt.Println("res:", res)
-	GPT13.Test()
 }
