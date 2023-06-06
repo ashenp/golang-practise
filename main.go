@@ -1,12 +1,7 @@
 package main
 
 import (
-<<<<<<< HEAD
-	"golang-practise/GPT13"
-=======
-	"golang-practise/GPT11"
 	_ "golang-practise/docs"
->>>>>>> 75d5749 (update)
 )
 
 // @title           Swagger Example API
