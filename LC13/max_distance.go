@@ -1,4 +1,4 @@
-package GPT13
+package LC13
 
 import "fmt"
 

@@ -1,4 +1,4 @@
-package GPT13
+package GPT14
 
 func SemiOrderedPermutation(nums []int) int {
 	n := len(nums)
@@ -16,5 +16,4 @@ func SemiOrderedPermutation(nums []int) int {
 		res--
 	}
 	return res
-
 }
