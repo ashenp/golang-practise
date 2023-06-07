@@ -1,6 +1,6 @@
-package GPT14
+package LC15
 
-func SemiOrderedPermutation(nums []int) int {
+func RemoveTrailingZeros(nums []int) int {
 	n := len(nums)
 	left, right := 0, n-1
 	res := 0
