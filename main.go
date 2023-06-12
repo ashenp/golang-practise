@@ -1,7 +1,7 @@
 package main
 
 import (
-	"golang-practise/LC25"
+	"golang-practise/LC26"
 	_ "golang-practise/docs"
 )
 
@@ -29,5 +29,6 @@ func main() {
 	//res := GPT09.CountLinesConcurrently("/Users/pianweiwan/Documents/github/golang-practise/GPT09", 4)
 	//fmt.Println("res:", res)
 	//LC24.Test()
-	LC25.Test()
+	//LC25.Test()
+	LC26.Test()
 }

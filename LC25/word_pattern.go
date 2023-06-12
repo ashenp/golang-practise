@@ -16,8 +16,10 @@ func wordPattern(pattern string, s string) bool {
 			left = i + 1
 
 			index++
+			if index >= len(pattern) {
+				return false
+			}
 			c := pattern[index]
-
 			if v, ok := m[c]; ok {
 				if v != w {
 					return false
